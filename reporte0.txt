@@ -1,0 +1,9 @@
+=========================
+A continuación se muestra el informe de los resultados de las pruebas de TestNG
+
+      INFORME DE TAREA
+=========================
+Nombre     : testMethod1
+Estado     : PASS
+Duración   : 10
+=========================

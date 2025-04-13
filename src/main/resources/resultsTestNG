@@ -1,0 +1,11 @@
+<testng-results skipped="0" failed="1" total="3" passed="2">
+  <suite name="Default Suite" duration-ms="1234">
+    <test name="TestName">
+      <class name="com.example.MyTest">
+        <test-method name="testMethod1" status="PASS" duration-ms="10"/>
+        <test-method name="testMethod2" status="FAIL" duration-ms="20"/>
+      </class>
+    </test>
+  </suite>
+</testng-results>
+
