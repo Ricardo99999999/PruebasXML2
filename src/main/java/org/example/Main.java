@@ -1,6 +1,7 @@
 package org.example;
 
 import clases.reportePlantilla;
+import clases.reportePlantillaHTML;
 import org.w3c.dom.*;
 import javax.xml.parsers.*;
 import java.io.File;
@@ -17,7 +18,7 @@ public class Main {
 
             DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
             DocumentBuilder dBuilder = dbFactory.newDocumentBuilder();
-           // Document doc = dBuilder.parse(inputFile);
+            // Document doc = dBuilder.parse(inputFile);
             Document doc = DocumentBuilderFactory.newInstance()
                     .newDocumentBuilder()
                     .parse(inputFile);
@@ -51,6 +52,12 @@ public class Main {
                 reporte.generateReport("reporte"+i+".txt");
 
                 System.out.println("Method: " + name + " | Status: " + status + " | Duration: " + duration + "ms");
+
+                reportePlantillaHTML reporteHTML = new reportePlantillaHTML(names[i], statuses[i], durations[i]);
+                reporteHTML.generateReport("reporteHTML"+i+".html");
+
+                System.out.println("Method: " + name + " | Status: " + status + " | Duration: " + duration + "ms");
+
             }
             //reportePlantilla reporte = new reportePlantilla("Nombre", "Completado", "2 horas 15 minutos");
             //reporte.generateReport("reporte.txt");
